@@ -14,5 +14,5 @@ console.log(john.firstname)
 
 var patrick = new Person('Patrick','Gao')
 
-patrick.greet
+patrick.greet()
 
