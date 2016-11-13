@@ -16,3 +16,4 @@ var patrick = new Person('Patrick','Gao')
 
 patrick.greet()
 
+test
