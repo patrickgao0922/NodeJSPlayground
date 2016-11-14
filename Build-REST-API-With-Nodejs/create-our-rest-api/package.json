@@ -2,7 +2,7 @@
   "name": "create-our-rest-api",
   "version": "0.0.1",
   "description": "Tutorial code of 'Create our REST API'",
-  "main": "index.js",
+  "main": "dist",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
