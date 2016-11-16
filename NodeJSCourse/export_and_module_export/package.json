@@ -1,0 +1,11 @@
+{
+  "name": "export_and_module_export",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrick Gao <patrickgao0922@gmail.com>",
+  "license": "ISC"
+}
