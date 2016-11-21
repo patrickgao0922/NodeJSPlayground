@@ -8,7 +8,7 @@ let router = express()
 // connect to Db
 initializedDb(db => {
     // internal middleware
-    app.use(middleware({config,db}))
+    router.use(middleware({config,db}))
     // api routes v1 (/v1)
 
 })
