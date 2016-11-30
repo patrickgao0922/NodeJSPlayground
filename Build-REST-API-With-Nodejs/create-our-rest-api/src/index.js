@@ -10,6 +10,9 @@ let app = express()
 app.server = http:createServer(app)
 
 // middleware
+app.use(bodyParser.json({
+    limit: config.bodyLimit
+}))
 
 // passport config
 
