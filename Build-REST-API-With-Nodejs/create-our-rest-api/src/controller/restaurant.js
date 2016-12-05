@@ -5,7 +5,7 @@ import Restaurant from '../model/restaurant'
 export default({config, db}) => {
     let api = Router()
     // '/v1/restaruant/add'
-    api.post('/add', (req, reb) => {
+    api.post('/add', (req, res) => {
         let newRest = new Restaurant()
         newRest.name = req.body.name
 
