@@ -4,7 +4,11 @@ import Restaurant from '../model/restaurant'
 
 export default({config, db}) => {
     let api = Router()
-    // '/v1/restaruant/add'
+
+    // CRUD - Create Read Update Delete
+
+
+    // '/v1/restaruant/add' - Create
     api.post('/add', (req, res) => {
         let newRest = new Restaurant()
         newRest.name = req.body.name
@@ -16,6 +20,19 @@ export default({config, db}) => {
             }
             res.json({message: 'Restaurant saved sucessfully'})
         })
+    })
+
+
+
+    //  '/v1/restaurant/' - read
+    api.get('/', (req, res) => {
+        Restaurant.find({}, (err, restaurants) => {
+            if (err) {
+                res.send(err)
+            }
+            res.json(restaurants)
+        })
+        
     })
 
     return api
