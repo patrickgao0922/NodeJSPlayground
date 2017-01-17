@@ -23,7 +23,11 @@ passport.use(new LocalStrategy({
     usernameField: 'email',
     password:'password'
 },
-Account.authenticate()))
+Account.authenticate()
+))
+
+passport.serializeUser(Account.serializeUser())
+passport.deserializeUser(Account.deserializeUser())
 
 // api routes v1
 app.use('/v1',routes)
