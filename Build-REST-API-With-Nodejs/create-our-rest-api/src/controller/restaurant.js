@@ -2,6 +2,7 @@ import mongoose from 'mongoose'
 import { Router } from 'express'
 import Restaurant from '../model/restaurant'
 
+
 export default({config, db}) => {
     let api = Router()
 
@@ -32,7 +33,7 @@ export default({config, db}) => {
             }
             res.json(restaurants)
         })
-        
+
     })
 
     // '/v1/restaurant/:id' - Read 1
