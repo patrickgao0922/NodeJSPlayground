@@ -13,6 +13,7 @@ initializedDb(db => {
     router.use(middleware({config,db}))
     // api routes v1 (/v1)
     router.use('/restaurant', restaurant({config, db}))
+    router.use('/account', account({config, db}))
 })
 
 export default router

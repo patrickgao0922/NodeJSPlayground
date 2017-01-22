@@ -9,8 +9,8 @@ import config from './config'
 import routes from './routes'
 
 let app = express()
-// app.server = http.createServer(app)
-let server = http.createServer(app)
+app.server = http.createServer(app)
+// let server = http.createServer(app)
 
 // middleware
 app.use(bodyParser.json({
@@ -32,7 +32,7 @@ passport.deserializeUser(Account.deserializeUser())
 
 // api routes v1
 app.use('/v1',routes)
-server.listen(config.port)
-console.log(`Started on port ${server.address().port}`)
+app.server.listen(config.port)
+console.log(`Started on port ${app.server.address().port}`)
 
 export default app

@@ -2,6 +2,7 @@ import mongoose from 'mongoose'
 import {Router} from 'express'
 import Account from '../model/account'
 import bodyParser from 'body-parser'
+import passport from 'passport'
 import config from '../config'
 
 import  {generateAccessToken, respond, authenticate} from '../middleware/authmiddleware'
@@ -19,7 +20,7 @@ export default ({config, db}) => {
                 if (err) {
                     res.send(err)
                 }
-                passport.authenticate(
+                 passport.authenticate(
                     'local', {
                         session:false
                     }
@@ -44,7 +45,7 @@ export default ({config, db}) => {
         res.status(200).send('Successful logged out')
     })
 
-    api.get('me', authenticate, (req, res) => {
+    api.get('/me', authenticate, (req, res) => {
         res.status(200).json(req.user)
     })
     return api
