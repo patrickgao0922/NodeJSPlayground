@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-const Schema = mongoos.Schema
+const Schema = mongoose.Schema
 import passportLocalMongoose from 'passport-local-mongoose'
 
 let Account = new Schema({
@@ -13,5 +13,5 @@ let Account = new Schema({
     }
 })
 
-Account.plugin(passprotLocalMongoose)
-modul.exports = mongoose.model('Account', Account)
+Account.plugin(passportLocalMongoose)
+module.exports = mongoose.model('Account', Account)

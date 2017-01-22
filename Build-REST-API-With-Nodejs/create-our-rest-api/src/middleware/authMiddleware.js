@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken'
-import expressJwt from 'expressJwt'
+import expressJwt from 'express-jwt'
 
 const TOKENTIME = 60*60*24*30 // 30 days
 const SECRET = "this is a secret"
