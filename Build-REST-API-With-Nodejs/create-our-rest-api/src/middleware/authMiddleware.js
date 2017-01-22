@@ -10,7 +10,7 @@ let authenticate = expressJwt({
 
 let generateAccessToken = (req, res, next) => {
     req.token = req.token || {}
-    req.token = jwt.sigh({
+    req.token = jwt.sign({
         id: req.user.id
     }, SECRET, {
         expiresIn: TOKENTIME
